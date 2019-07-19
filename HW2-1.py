@@ -14,13 +14,12 @@ import matplotlib.cm as cm
 def download(url):
     savepath = "./mnist"
 
-
     files = [
         "train-images-idx3-ubyte.gz",
         "train-labels-idx1-ubyte.gz",
         "t10k-images-idx3-ubyte.gz",
         "t10k-labels-idx1-ubyte.gz"
-]
+    ]
 
     if not os.path.exists(savepath):
         os.mkdir(savepath)
@@ -41,7 +40,7 @@ def download(url):
                 w.write(body)
     print("ok")
 
-    directory = "C:/Users/한종훈/PycharmProjects/HW2/mnist/"
+    directory = "./mnist/"
     for filename in os.listdir(directory):
         if filename.startswith("t10k"):
             path =os.path.join(directory, filename)
